@@ -1,0 +1,19 @@
+{
+  "name": "cycle-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "rm -rf ./development && rm -rf ./.cache && parcel public/index.html -p 4200",
+    "build": "parcel build public/index.html --out-dir dist --public-url ./"
+  },
+  "author": "Haris Zenovic",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.8"
+  }
+}
