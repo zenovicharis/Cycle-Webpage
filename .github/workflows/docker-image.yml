@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build --tag zenovicharis/cycle-app:latest . --file Dockerfile
+    - name: Publish Docker Image
+      run: |
+        docker login -u ${{ secrets.DOCKER_USER}} -p ${{ secrets.DOCKER_PASS }}
+        docker push zenovicharis/cycle-app:latest
+
+     
