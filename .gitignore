@@ -3,3 +3,4 @@ development/
 .cache/
 docs/
 dist/
+.parcel-cache/
