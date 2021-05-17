@@ -1,47 +1,18 @@
 @keyframes LogoRotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
-
 @keyframes LogoShrink {
-    from {
-        max-width: 70%;
-    }
-    to {
-        max-width: 50%;
-    }
+    from { max-width: 70%; }
+    to { max-width: 50%;  }
 }
 
 @keyframes OptionBackground {
-    from {
-        background-color: transparent;
-    }
-    to {
-        background-color: $orange;
-    }
+    from {background-color: transparent;}
+    to {background-color: $orange;}
 }
 
 @keyframes OptionText {
-    from {
-        top: -10px;
-        opacity: 0;
-    }
-    to {
-        top: 0px;
-        opacity: 1;
-    }
-}
-
-@keyframes MoveTop {
-    0% {
-        top: 0;
-    }
-    100% {
-        top: 100vh;
-        height: 0;
-    }
+    from {top: -10px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
 }

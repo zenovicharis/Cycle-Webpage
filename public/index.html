@@ -28,6 +28,7 @@
 		<link rel="mask-icon" href="../src/assets/img/icons/safari-pinned-tab.svg" color="#5bbad5">
 		<!-- JS -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="../src/script.js"></script>
 	</head>
 	<body>
 		<div class="loader">
@@ -104,17 +105,32 @@
 							</div>
 						</div>
 						<div class="phone-options">
-							<div class="phone-option active" data-name="problem" onclick="ChangePhoneFrame(this);">
+							<div class="phone-option active" data-name="problem">
 								<div id="problem" class="phone-option-background"></div>
 								<div class="phone-option-description"><p>Post a problem</p></div>
+								<div style="display:none;">
+									<video id="video-problem">
+										<source id="video-problem-src" src="../src/assets/vid/problem.mp4" type="video/mp4">
+									</video>
+								</div>
 							</div>
-							<div class="phone-option" data-name="connect" onclick="ChangePhoneFrame(this);">
+							<div class="phone-option" data-name="connect">
 								<div id="connect" class="phone-option-background"></div>
 								<div class="phone-option-description"><p>Connect</p></div>
+								<div style="display:none;">
+									<video id="video-connect" autoplay="" muted="" loop="" playsinline="">
+										<source id="video-connect-src" src="../src/assets/vid/connect.mp4" type="video/mp4">
+									</video>
+								</div>
 							</div>
-							<div class="phone-option" data-name="solution" onclick="ChangePhoneFrame(this);">
+							<div class="phone-option" data-name="solution">
 								<div id="solution" class="phone-option-background"></div>
 								<div class="phone-option-description"><p>Get a Solution</p></div>
+								<div style="display:none;">
+									<video id="video-solution" autoplay="" muted="" loop="" playsinline="">
+										<source id="video-solution" src="../src/assets/vid/solution.mp4" type="video/mp4">
+									</video>
+								</div>
 							</div>
 							<div class="phone-option-texts-line"></div>
 							<div class="phone-option-texts">
@@ -172,6 +188,5 @@
 				</section>
 			</div>
 		</main>
-		<script type="text/javascript" src="../src/script.js"></script>
 	</body>
 </html>
