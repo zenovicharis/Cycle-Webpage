@@ -1,4 +1,5 @@
 import "./assets/scss/main.scss";
+import $ from "jquery";
 
 function ChangePhoneFrame(e) {
   var el = $(e.target).closest(".phone-option");
@@ -12,10 +13,10 @@ function ChangePhoneFrame(e) {
   $("#video")[0].load();
 }
 
-$(document).on("click", ".phone-option", ChangePhoneFrame)
+$(document).on("click", ".phone-option", ChangePhoneFrame);
 
 $(document).ready(function () {
-  $(".phone-option").each(function(i, el) {
+  $(".phone-option").each(function (i, el) {
     var fileName = $($(el).find("source")[0]).attr("src").substring(1);
     console.log(i, $(el).data("name", fileName));
     console.log(i, $(el).data("name"));
@@ -26,8 +27,6 @@ $(document).ready(function () {
       $(".loader").css("transition", "0s");
     }, 4500);
   }, 3500);
-
-
 
   setInterval(function () {
     NextPhoneFrame();

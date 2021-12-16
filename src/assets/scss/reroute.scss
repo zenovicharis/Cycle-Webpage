@@ -1,0 +1,36 @@
+@import "font.scss";
+body {
+  margin: 0;
+  font-family: "Poppins", Helvetica, sans-serif;
+}
+.hidden {
+  display: none;
+}
+.loading {
+  width: 100%;
+  min-height: 100vh;
+  background: #50509f;
+  display: flex;
+  align-content: center;
+}
+.cycle-loading-img {
+  display: inline-block;
+  margin: auto;
+  text-align: center;
+}
+.cycle-loading-img svg {
+  animation: loading 3s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  transition: 1s;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
