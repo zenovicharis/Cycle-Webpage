@@ -1,10 +1,14 @@
 import "./assets/scss/main.scss";
+
 import $ from "jquery";
 
 function ChangePhoneFrame(e) {
   var el = $(e.target).closest(".phone-option");
-  var name = el.data("name");
-  var video = "./" + name;
+  var path = el.data("name");
+  var video = "./" + path;
+  let [_, __, fileName] = path.split("/");
+  let [name, ___] = fileName.split(".");
+  // debugger;
   $(".phone-option.active").removeClass("active");
   el.addClass("active");
   $(".phone-option-text.active").removeClass("active");
@@ -39,8 +43,12 @@ $(document).ready(function () {
     if (next == l) {
       next = 0;
     }
-    var name = $(".phone-option").eq(next).data("name");
-    var video = "./" + name;
+    // debugger;
+    var path = $(".phone-option").eq(next).data("name");
+
+    let [_, __, fileName] = path.split("/");
+    let [name, ___] = fileName.split(".");
+    var video = "./" + path;
     $(".phone-option.active").removeClass("active");
     $(".phone-option").eq(next).addClass("active");
     $(".phone-option-text.active").removeClass("active");

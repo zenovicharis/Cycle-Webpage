@@ -1,24 +1,17 @@
 {
-  "name": "cycle-website",
-  "version": "1.0.0",
-  "description": "Presentational web-page for Mobile App",
-  "main": "index.js",
+  "name": "vite-test",
+  "version": "0.0.0",
   "scripts": {
-    "test": "test",
-    "dev": "rimraf ./development && rimraf ./.cache && parcel public/*.html -p 4200",
-    "build": "parcel build public/index.html --out-dir dist --public-url ./"
-  },
-  "author": "Haris Zenovic",
-  "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.6.0",
-    "parcel": "^2.0.1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "@parcel/packager-raw-url": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
-    "@parcel/transformer-webmanifest": "^2.0.1",
-    "rimraf": "^2.7.1",
-    "sass": "^1.26.8"
+    "sass": "^1.45.1",
+    "vite": "^2.7.2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }
