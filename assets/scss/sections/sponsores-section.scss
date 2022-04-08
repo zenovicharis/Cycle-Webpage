@@ -1,0 +1,50 @@
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-75%);
+  }
+}
+.sponsores-section {
+  padding: 0;
+
+  .sponsores {
+    display: flex;
+    overflow: hidden;
+    img {
+      padding-right: 2rem;
+      width: 5rem;
+    }
+
+    .sponsores-inner {
+      animation: marquee 16s linear infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  @include media-min-m {
+    background-color: #eee;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    h4 {
+      margin: 0;
+      padding-bottom: 2rem;
+    }
+    .sponsores {
+      justify-content: center;
+      .sponsores-inner {
+        animation: none;
+        img {
+          width: 10rem;
+          padding-right: 2rem;
+          &.helping {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

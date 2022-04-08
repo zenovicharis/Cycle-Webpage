@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="99.056" height="99.056" viewBox="0 0 99.056 99.056">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #50509f;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-size: 46px;
+        font-family: Poppins-Bold, Poppins;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+      }
+    </style>
+  </defs>
+  <g id="Group_10033" data-name="Group 10033" transform="translate(-221 -2813.669)">
+    <g id="Ellipse_1-2" data-name="Ellipse 1-2" transform="translate(221 2813.669)">
+      <g id="Group_9905" data-name="Group 9905">
+        <circle id="Ellipse_422" data-name="Ellipse 422" class="cls-1" cx="49.528" cy="49.528" r="49.528"/>
+      </g>
+    </g>
+    <g id="Group_9969" data-name="Group 9969" transform="translate(-10178.77 -3711.053)">
+      <text id="KP" class="cls-2" transform="translate(10418.162 6590.25)"><tspan x="0" y="0">KP</tspan></text>
+    </g>
+  </g>
+</svg>

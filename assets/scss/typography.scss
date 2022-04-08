@@ -1,0 +1,35 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Poppins-Bold;
+}
+
+p {
+  font-family: Poppins-Medium;
+  margin: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.title-block {
+  text-align: center;
+  h5,
+  h2 {
+    margin: 0;
+  }
+
+  .subheader-top {
+    font-family: Poppins-Light;
+    color: $primary_color;
+    padding-bottom: 0.3rem;
+  }
+
+  .mainheader-bottom {
+    padding-bottom: 2rem;
+  }
+}

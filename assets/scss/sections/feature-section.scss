@@ -1,0 +1,68 @@
+.features {
+  padding: 3rem 1rem;
+  text-align: center;
+
+  .feature-background {
+    padding: 0 20rem;
+    background: url("../img/backgrounds/features.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .feature-text {
+    .description-mail {
+      text-align: left;
+      font-family: Poppins-Regular;
+      color: $subtext_color;
+    }
+
+    .compact-card {
+      padding: 1rem 0;
+      .compact-card-title {
+        h3 {
+          margin: 0;
+          color: $subtitle_color;
+        }
+        padding: 0.5rem 0;
+        font-family: Poppins-Bold;
+      }
+
+      .compact-card-text {
+        p {
+          font-family: Poppins-Regular;
+          color: $subtext_color;
+        }
+      }
+    }
+  }
+
+  @include media-min-m {
+    padding: 3rem 6rem;
+    display: flex;
+    .feature-background {
+      display: flex;
+      order: 2;
+    }
+    .feature-text {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      .title-block {
+        text-align: left;
+        .subheader-top {
+          display: none;
+        }
+        .mainheader-bottom {
+          font-size: 3em;
+        }
+      }
+      .compact-card {
+        display: flex;
+        text-align: left;
+        .compact-card-content {
+          padding-left: 1rem;
+        }
+      }
+    }
+  }
+}

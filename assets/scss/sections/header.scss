@@ -1,0 +1,54 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  .logo-container {
+    padding: 0.3rem 1rem;
+  }
+
+  .menu-list {
+    display: none;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      li {
+        display: inline-block;
+        padding: 1rem 1rem;
+        a {
+          font-family: Poppins-Regular;
+          letter-spacing: 1px;
+          color: #fff;
+          text-decoration: none;
+          display: block;
+          padding: 0.5rem 1rem;
+        }
+        &:last-child a {
+          border: 1px solid $secondary_color;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
+  .burger-menu {
+    width: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 0.3rem;
+    z-index: 3;
+  }
+
+  @include media-min-m {
+    justify-content: space-between;
+
+    .menu-list {
+      display: block;
+    }
+
+    .burger-menu {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<svg id="icon_Social_Facebook_white" data-name="icon/Social/Facebook/white" xmlns="http://www.w3.org/2000/svg" width="11.206" height="21.011" viewBox="0 0 11.206 21.011">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #50509f;
+      }
+    </style>
+  </defs>
+  <path id="facebook" class="cls-1" d="M7.644,21.011V11.556h3.062l.5-4.2H7.644V5.307c0-1.082.029-2.156,1.642-2.156H10.92v-3A19.257,19.257,0,0,0,8.1,0C5.132,0,3.276,1.741,3.276,4.938V7.354H0v4.2H3.276v9.455Z"/>
+</svg>
