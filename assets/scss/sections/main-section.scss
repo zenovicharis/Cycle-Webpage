@@ -4,12 +4,16 @@
   background-repeat: no-repeat;
   background-size: 59rem;
   background-position: -32rem -16rem;
+  position: relative;
+  overflow: hidden;
 
   .jumbotron {
     padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-bottom: 6rem;
     color: #fff;
+    z-index: 2;
     .jumbotron-text {
+      z-index: inherit;
       h1 {
         padding-bottom: 2rem;
         font-size: 3.5rem;
@@ -31,6 +35,7 @@
       }
     }
     .jumbotron-background {
+      z-index: inherit;
       display: none;
       .jumbotron-background-inner {
         background: url("../img/backgrounds/hero.png");
@@ -43,7 +48,7 @@
   }
 
   @include media-min-m {
-    padding: 3rem 6rem;
+    padding: 3rem 3rem;
     padding-bottom: 0;
     background-color: $primary_color;
     background-size: 69rem;
@@ -56,6 +61,10 @@
 
       .jumbotron-text {
         width: 50%;
+
+        align-self: flex-start;
+        margin-top: 10rem;
+
         h1 {
           font-size: 4em;
         }
@@ -79,6 +88,63 @@
         display: block;
         width: 50%;
       }
+    }
+  }
+  @include media-min-l {
+    padding: 3rem 6rem;
+  }
+}
+
+.background-element {
+  z-index: 1;
+  position: absolute;
+  width: 300%;
+  top: 0rem;
+  left: -30rem;
+  @include media-min-m {
+    width: 100%;
+    top: 15rem;
+    left: -12rem;
+  }
+  transform: rotate(45deg);
+  background-color: rgba(0, 0, 0, 0.03);
+  .background-gradients {
+    &.first {
+      height: 7rem;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.03) 13%,
+        rgba(0, 0, 0, 0) 18%
+      );
+    }
+
+    &.second {
+      height: 5rem;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 5%,
+        rgba(0, 0, 0, 0.03) 35%
+      );
+    }
+    &.third {
+      height: 5rem;
+      margin-bottom: 3rem;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.03) 60%,
+        rgba(0, 0, 0, 0) 75%
+      );
+    }
+
+    &.fourth {
+      height: 7rem;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.03) 40%,
+        rgba(0, 0, 0, 0) 80%
+      );
     }
   }
 }

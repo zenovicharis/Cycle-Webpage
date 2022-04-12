@@ -1,9 +1,9 @@
 .features {
-  padding: 3rem 1rem;
+  padding: 0rem 1rem;
   text-align: center;
 
   .feature-background {
-    padding: 0 20rem;
+    padding: 15rem 0;
     background: url("../img/backgrounds/features.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -37,11 +37,14 @@
   }
 
   @include media-min-m {
-    padding: 3rem 6rem;
+    padding: 3rem 3rem;
     display: flex;
     .feature-background {
       display: flex;
       order: 2;
+    }
+    .feature-background {
+      padding: 0 20rem;
     }
     .feature-text {
       display: flex;
@@ -64,5 +67,9 @@
         }
       }
     }
+  }
+
+  @include media-min-l {
+    padding: 3rem 6rem;
   }
 }

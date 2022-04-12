@@ -24,7 +24,6 @@ footer {
     }
   }
   .app-footer-info {
-    display: none;
     .stores {
       display: flex;
       justify-content: space-between;
@@ -36,15 +35,22 @@ footer {
       }
     }
     .app-footer-brand {
-      display: flex;
-      align-items: center;
+      img {
+        width: 16rem;
+      }
+    }
+    .app-footer-brand-text {
+      display: none;
+    }
+    .app-footer-brand {
+      display: none;
     }
   }
 
   @include media-min-m {
     display: flex;
     align-items: center;
-    padding: 2rem 6rem;
+    padding: 2rem 3rem;
 
     .app-footer-info {
       display: block;
@@ -60,7 +66,11 @@ footer {
         }
       }
       .app-footer-brand-text {
+        display: block;
         padding: 1rem 0;
+      }
+      .app-footer-brand {
+        display: block;
       }
     }
     .lists {
@@ -79,6 +89,10 @@ footer {
       order: 1;
       width: 50%;
     }
+  }
+
+  @include media-min-l {
+    padding: 3rem 6rem;
   }
 }
 

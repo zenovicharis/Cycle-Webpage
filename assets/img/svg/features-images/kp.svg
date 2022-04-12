@@ -1,27 +1,3 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="99.056" height="99.056" viewBox="0 0 99.056 99.056">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #50509f;
-      }
-
-      .cls-2 {
-        fill: #fff;
-        font-size: 46px;
-        font-family: Poppins-Bold, Poppins;
-        font-weight: 700;
-        letter-spacing: 0.01em;
-      }
-    </style>
-  </defs>
-  <g id="Group_10033" data-name="Group 10033" transform="translate(-221 -2813.669)">
-    <g id="Ellipse_1-2" data-name="Ellipse 1-2" transform="translate(221 2813.669)">
-      <g id="Group_9905" data-name="Group 9905">
-        <circle id="Ellipse_422" data-name="Ellipse 422" class="cls-1" cx="49.528" cy="49.528" r="49.528"/>
-      </g>
-    </g>
-    <g id="Group_9969" data-name="Group 9969" transform="translate(-10178.77 -3711.053)">
-      <text id="KP" class="cls-2" transform="translate(10418.162 6590.25)"><tspan x="0" y="0">KP</tspan></text>
-    </g>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="100.057" height="100.057" viewBox="0 0 100.057 100.057">
+  <path id="Subtraction_1" data-name="Subtraction 1" d="M49.528,99.057A49.541,49.541,0,0,1,30.249,3.892,49.541,49.541,0,0,1,68.807,95.164,49.218,49.218,0,0,1,49.528,99.057Zm6.239-64.018V67.331h7.866V55.74h4.876a14,14,0,0,0,6.624-1.426,9.525,9.525,0,0,0,3.956-3.749,10.452,10.452,0,0,0,1.288-5.129,10.749,10.749,0,0,0-1.334-5.381,9.215,9.215,0,0,0-4-3.681,14.584,14.584,0,0,0-6.532-1.334ZM31.11,53.071l0,0L41.967,67.331h9.614L38.608,50.864,51.12,35.039H41.875L31.11,49.207V35.039H23.244V67.331H31.11V53.071Zm36.8-3.588H63.633v-8.1H67.91a4.713,4.713,0,0,1,3.358,1.057,3.963,3.963,0,0,1,1.1,2.99,3.964,3.964,0,0,1-1.1,2.991A4.716,4.716,0,0,1,67.91,49.483Z" transform="translate(0.5 0.5)" fill="#50509f" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
 </svg>

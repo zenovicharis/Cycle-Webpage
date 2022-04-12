@@ -1,59 +1,66 @@
 import "./assets/scss/main.scss";
 
-import $ from "jquery";
+import "swiper/css";
+import Swiper from "swiper";
+import Gumshoe from "gumshoejs";
+import SmoothScroll from "smooth-scroll";
 
-function ChangePhoneFrame(e) {
-  var el = $(e.target).closest(".phone-option");
-  var path = el.data("name");
-  var video = "./" + path;
-  let [_, __, fileName] = path.split("/");
-  let [name, ___] = fileName.split(".");
-  // debugger;
-  $(".phone-option.active").removeClass("active");
-  el.addClass("active");
-  $(".phone-option-text.active").removeClass("active");
-  var text = $("#" + name + "-t").addClass("active");
-  $("#video-src").attr("src", video);
-  $("#video")[0].load();
-}
+var menu = document.getElementById("menu-toggle");
+var header = document.getElementsByTagName("header")[0];
+var menuBack = document.getElementById("menu-toggle-back");
+var mobileMenuButtons = document.querySelectorAll(".mobile-menu-inner a");
+var menuContent = document.getElementById("menu-content");
+var questions = document.querySelectorAll(".question-answer");
 
-$(document).on("click", ".phone-option", ChangePhoneFrame);
+var spy = new Gumshoe("#menu-list-desktop a", {
+  offset: function () {
+    return header.getBoundingClientRect().height;
+  },
+  events: true,
+});
 
-$(document).ready(function () {
-  $(".phone-option").each(function (i, el) {
-    var fileName = $($(el).find("source")[0]).attr("src").substring(1);
-    console.log(i, $(el).data("name", fileName));
-    console.log(i, $(el).data("name"));
-  });
-  setTimeout(function () {
-    $("body").addClass("loaded");
-    setTimeout(function () {
-      $(".loader").css("transition", "0s");
-    }, 4500);
-  }, 3500);
-
-  setInterval(function () {
-    NextPhoneFrame();
-  }, 15000);
-
-  function NextPhoneFrame() {
-    var l = $(".phone-option").length;
-    var active = $(".phone-option.active").index();
-    var next = active + 1;
-    if (next == l) {
-      next = 0;
+document.addEventListener(
+  "gumshoeActivate",
+  function (event) {
+    if (event.detail.content.id === "sponsors") {
+      header.classList.add("colored");
     }
-    // debugger;
-    var path = $(".phone-option").eq(next).data("name");
 
-    let [_, __, fileName] = path.split("/");
-    let [name, ___] = fileName.split(".");
-    var video = "./" + path;
-    $(".phone-option.active").removeClass("active");
-    $(".phone-option").eq(next).addClass("active");
-    $(".phone-option-text.active").removeClass("active");
-    var text = $("#" + name + "-t").addClass("active");
-    $("#video-src").attr("src", video);
-    $("#video")[0].load();
-  }
+    if (event.detail.content.id === "main") {
+      header.classList.remove("colored");
+    }
+  },
+  false
+);
+
+new SmoothScroll('a[href*="#"]', {
+  header: "header",
+});
+
+mobileMenuButtons.forEach((link) => {
+  link.addEventListener("click", () => {
+    menuContent.classList.remove("display");
+  });
+});
+
+menu.addEventListener("click", () => {
+  menuContent.classList.toggle("display");
+});
+
+menuBack.addEventListener("click", () => {
+  menuContent.classList.toggle("display");
+});
+
+questions.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    let radioButton = this.querySelector("input");
+    radioButton.checked = !radioButton.checked;
+  });
+});
+
+const swiper = new Swiper(".card-swiper", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 10,
 });

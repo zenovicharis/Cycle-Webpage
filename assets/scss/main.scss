@@ -5,6 +5,10 @@ section {
   padding: 0 1rem;
 }
 
+.hidden {
+  display: none !important;
+}
+
 @import "font.scss";
 @import "config.scss";
 @import "typography.scss";

@@ -37,11 +37,18 @@
       justify-content: center;
       .sponsores-inner {
         animation: none;
+        justify-content: space-around;
+        align-items: center;
+        width: 60%;
         img {
-          width: 10rem;
+          height: 2rem;
+          width: auto;
           padding-right: 2rem;
           &.helping {
             display: none;
+          }
+          &:nth-child(3) {
+            height: 5rem;
           }
         }
       }
