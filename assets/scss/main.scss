@@ -1,3 +1,7 @@
+html {
+  // scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -12,6 +16,7 @@ section {
 @import "font.scss";
 @import "config.scss";
 @import "typography.scss";
+@import "keyframes.scss";
 
 // sections
 @import "sections/main-section.scss";
@@ -21,4 +26,4 @@ section {
 @import "sections/feedback-section.scss";
 @import "sections/footer.scss";
 @import "sections/header.scss";
-@import "sections/mobile-menu.scss";
+@import "sections/loading.scss";

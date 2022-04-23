@@ -77,38 +77,51 @@
     />
   </head>
   <body>
-    <div class="wrapper">
-      <section class="mobile-menu" id="menu-content">
-        <div class="mobile-menu-inner">
-          <div class="top-header-wrap">
-            <div class="logo-container">
-              <img src="./assets/img/svg/logos/cycle-black.svg" alt="" />
-            </div>
-            <div class="burger-menu" id="menu-toggle-back">
-              <img src="./assets/img/svg/logos/back.svg" alt="" />
-            </div>
-          </div>
-          <ul>
-            <li class="hidden"><a data-scroll href="#main">Main</a></li>
-            <li class="hidden"><a data-scroll href="#sponsors">Sponsors</a></li>
-            <li><a data-scroll href="#how-it-works">How it Works</a></li>
-            <li><a data-scroll href="#features">Features</a></li>
-            <li><a data-scroll href="#testemonials">Testemonials</a></li>
-            <li><a data-scroll href="#faq">FAQ</a></li>
-          </ul>
-          <div class="button-wrapper">
-            <button>Download</button>
-          </div>
-        </div>
-      </section>
+    <!-- LOADING SECTION -->
+    <section class="loading">
+      <div class="logo-container">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="48"
+          height="22"
+          viewBox="0 0 48 22"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                clip-path: url(#clip-BELO);
+              }
+
+              .cls-2 {
+                fill: #fff;
+              }
+            </style>
+            <clipPath id="clip-BELO">
+              <rect width="48" height="22" />
+            </clipPath>
+          </defs>
+          <g id="BELO" class="cls-1">
+            <path
+              id="Path_6653"
+              data-name="Path 6653"
+              class="cls-2"
+              d="M179.525,504.8a10.956,10.956,0,0,0-7.235-3.2c-.173-.008-.348-.012-.52-.012h0a10.941,10.941,0,0,0-5.944,1.744c-.233.149-.464.31-.685.479-.1.073-.192.148-.287.225l-1.528-1.537-2.027,7.486,7.5-1.986-1.43-1.437c.121-.089.244-.174.369-.254l.006,0a7.413,7.413,0,0,1,4.029-1.18c.117,0,.236,0,.352.008a7.441,7.441,0,0,1-.362,14.873c-.088,0-.176,0-.262,0h-.027l-.055,0-.043,0c-2.973-.153-4.9-2.131-7.137-4.421-.3-.313-.62-.636-.939-.954l-6.611-6.611c-.3-.3-.611-.618-.908-.923a27.185,27.185,0,0,0-3.928-3.533,10.534,10.534,0,0,0-5.558-1.95l-.078,0-.038,0-.066,0c-.128,0-.259-.007-.388-.007a10.976,10.976,0,0,0-.53,21.94c.174.008.349.013.521.012a10.94,10.94,0,0,0,5.942-1.743c.234-.15.465-.311.688-.48.1-.073.192-.148.287-.225l1.528,1.537,2.027-7.486-7.5,1.986,1.43,1.437c-.121.089-.244.174-.369.254l-.006,0a7.412,7.412,0,0,1-4.029,1.18h0c-.117,0-.236,0-.352-.008a7.441,7.441,0,0,1,.362-14.873c.088,0,.176,0,.262,0h.027l.055,0,.043,0c2.974.153,4.9,2.131,7.137,4.421.3.313.62.636.939.954l6.611,6.611c.3.3.611.619.908.923a27.183,27.183,0,0,0,3.928,3.533,10.532,10.532,0,0,0,5.558,1.95l.078,0,.038,0,.066,0c.128,0,.259.007.387.007a10.976,10.976,0,0,0,7.765-18.741Z"
+              transform="translate(-134.747 -501.592)"
+            />
+          </g>
+        </svg>
+      </div>
+    </section>
+    <!-- LOADING SECTION -->
+    <div class="wrapper hidden">
       <!-- MAIN SECTION -->
       <header>
         <div class="header-container">
           <div class="logo-container">
-            <img src="./assets/img/svg/logos/cycle-white.svg" alt="" />
-          </div>
-          <div class="burger-menu" id="menu-toggle">
-            <img src="./assets/img/svg/logos/burger.svg" alt="" />
+            <a data-scroll href="#main">
+              <img src="./assets/img/svg/logos/cycle-white.svg" alt="" />
+            </a>
           </div>
           <div class="menu-list" id="menu-list-desktop">
             <ul>
@@ -362,6 +375,7 @@
             </div>
           </div>
         </div>
+        <div class="orange-dot"></div>
       </section>
       <!-- FEATURE SECTION -->
 
@@ -408,10 +422,10 @@
                   id="selected-1"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet
-                  ratione, laboriosam rem voluptates dolorem blanditiis
-                  repudiandae veniam dolor obcaecati sit, laudantium nisi, iste
-                  consectetur quod magnam sequi non quas totam.
+                  Cycle is the ultimate karma application specifically designed
+                  to help you and others around you. Get any kind of assistance,
+                  donate or get donations anywhere in the world by just
+                  returning the favor.
                 </div>
               </div>
 
@@ -426,10 +440,8 @@
                   id="selected-2"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Cycle connects you with profiles using location-based
+                  technology filtered by requests or donations.
                 </div>
               </div>
 
@@ -446,34 +458,42 @@
                   id="selected-3"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Simple 3 step process:
+                  <ol>
+                    <li>Register with your email</li>
+                    <li>Verify email - earn karma point</li>
+                    <li>
+                      Connected (at this stage you can post, interact or just
+                      view the content).
+                    </li>
+                  </ol>
                 </div>
               </div>
 
               <div class="question-answer">
-                <label for="selected-4">
-                  <div class="question">Is Cycle free ?</div>
+                <label for="selected-12">
+                  <div class="question">
+                    How does the Karma Point system work ?
+                  </div>
                 </label>
                 <input
                   type="radio"
                   name="expanded"
                   class="hidden-radio"
-                  id="selected-4"
+                  id="selected-12"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Karma Point is a digital token that is earned internally by
+                  solving someone's requests or by donating. To post a problem
+                  or get donations you need Karma Point. It is the system based
+                  on the Karma causality principle - what goes around comes back
+                  around.
                 </div>
               </div>
 
               <div class="question-answer">
                 <label for="selected-5">
-                  <div class="question">Are Cycle profiles real ?</div>
+                  <div class="question">How do cycle connections work ?</div>
                 </label>
                 <input
                   type="radio"
@@ -482,16 +502,19 @@
                   id="selected-5"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Cycle connection works on the principle of the universal
+                  causal law by which positive actions generate positive
+                  circumstances. Cycle users follow this principle and generate
+                  karma point which is a digital token that has its internal
+                  value.
                 </div>
               </div>
 
               <div class="question-answer">
                 <label for="selected-6">
-                  <div class="question">How does Karma Point system work ?</div>
+                  <div class="question">
+                    How do I sign up using Facebook or Google?
+                  </div>
                 </label>
                 <input
                   type="radio"
@@ -500,17 +523,15 @@
                   id="selected-6"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  On the Cycle registration screen, choose either Facebook or
+                  Google icon and enter your login credentials.
                 </div>
               </div>
             </div>
             <div class="second-batch">
               <div class="question-answer">
                 <label for="selected-7">
-                  <div class="question">How do Cycle connection work ?</div>
+                  <div class="question">What are donations for ?</div>
                 </label>
                 <input
                   type="radio"
@@ -519,10 +540,10 @@
                   id="selected-7"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Donating is important in Karma because it's a way for you to
+                  participate in the “positive” end of the action. Additionally,
+                  donations allow cycle users to generate more karma points by
+                  donating and spending more by getting the donations.
                 </div>
               </div>
 
@@ -537,16 +558,15 @@
                   id="selected-8"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  All the user's data is permanently deleted. Users can always
+                  decide to deactivate accounts so that they avoid losing the
+                  data permanently.
                 </div>
               </div>
 
               <div class="question-answer">
                 <label for="selected-9">
-                  <div class="question">What are Donations for ?</div>
+                  <div class="question">What are Requests for?</div>
                 </label>
                 <input
                   type="radio"
@@ -555,16 +575,14 @@
                   id="selected-9"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Requests serve users to get any kind of assistance anywhere in
+                  the world or assist other users in need.
                 </div>
               </div>
 
               <div class="question-answer">
                 <label for="selected-10">
-                  <div class="question">What are Requests for ?</div>
+                  <div class="question">Who are Cycle users?</div>
                 </label>
                 <input
                   type="radio"
@@ -573,10 +591,9 @@
                   id="selected-10"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Cycle users are anyone who faces everyday problems and wants
+                  them to be solved. The added value of cycle are donations that
+                  are used by users who likes to donate or get donations.
                 </div>
               </div>
 
@@ -591,27 +608,24 @@
                   id="selected-11"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Cycle is for every individual who with positive actions wants
+                  to create positive circumstances!
                 </div>
               </div>
+
               <div class="question-answer">
-                <label for="selected-12">
-                  <div class="question">Is Cycle for me ?</div>
+                <label for="selected-4">
+                  <div class="question">Is Cycle free ?</div>
                 </label>
                 <input
                   type="radio"
                   name="expanded"
                   class="hidden-radio"
-                  id="selected-12"
+                  id="selected-4"
                 />
                 <div class="answer">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Beatae ex provident dolorum a, voluptates cumque velit,
-                  tenetur ab alias adipisci quod vitae reiciendis consectetur.
-                  Assumenda voluptatum voluptates exercitationem adipisci quae!
+                  Cycle can be downloaded for free in the Play Store and Apple
+                  Store.
                 </div>
               </div>
             </div>
@@ -646,6 +660,9 @@
               <li><a data-scroll href="#features">Features</a></li>
               <li><a data-scroll href="#faq">FAQ</a></li>
               <li><a data-scroll href="#footer">Contact</a></li>
+              <li>
+                <a href="https://team.8cycle.app/" target="_blank">Team</a>
+              </li>
             </ul>
           </div>
           <div class="social">
@@ -671,7 +688,9 @@
         </div>
         <div class="app-footer-info">
           <div class="app-footer-brand">
-            <img src="./assets/img/svg/logos/full-logo.svg" alt="" />
+            <a data-scroll href="#main">
+              <img src="./assets/img/svg/logos/full-logo.svg" alt="" />
+            </a>
           </div>
           <div class="app-footer-brand-text">
             <p>

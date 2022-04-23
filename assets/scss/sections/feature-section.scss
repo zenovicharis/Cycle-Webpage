@@ -11,7 +11,7 @@
   }
   .feature-text {
     .description-mail {
-      text-align: left;
+      text-align: center;
       font-family: Poppins-Regular;
       color: $subtext_color;
     }
@@ -38,7 +38,17 @@
 
   @include media-min-m {
     padding: 3rem 3rem;
+    position: relative;
     display: flex;
+    .orange-dot {
+      width: 5rem;
+      height: 5rem;
+      background-color: $secondary_color;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 5rem;
+      right: 5rem;
+    }
     .feature-background {
       display: flex;
       order: 2;
@@ -50,6 +60,9 @@
       display: flex;
       flex-direction: column;
       order: 1;
+      .description-mail {
+        text-align: left;
+      }
       .title-block {
         text-align: left;
         .subheader-top {
@@ -64,6 +77,19 @@
         text-align: left;
         .compact-card-content {
           padding-left: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .compact-card-title {
+            padding: 0;
+          }
+        }
+        .compact-card-icon {
+          display: flex;
+          img {
+            transition: all 0.3s ease;
+            width: 3rem;
+          }
         }
       }
     }

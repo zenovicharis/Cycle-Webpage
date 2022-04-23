@@ -124,6 +124,9 @@
     }
 
     .answer {
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: fill-available;
       height: 0;
       transition: all 0.7s ease 0;
       overflow: hidden;
@@ -145,7 +148,7 @@
       height: auto;
       top: 80%;
       left: 0;
-      box-shadow: 1px 4px 7px #c5c5c5;
+      box-shadow: 0px 4px 7px 2px $shadow_color;
     }
   }
   @include media-min-m {

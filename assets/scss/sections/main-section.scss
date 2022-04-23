@@ -61,9 +61,7 @@
 
       .jumbotron-text {
         width: 50%;
-
-        align-self: flex-start;
-        margin-top: 10rem;
+        align-self: center;
 
         h1 {
           font-size: 4em;
@@ -113,8 +111,8 @@
       height: 7rem;
       background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.03) 13%,
-        rgba(0, 0, 0, 0) 18%
+        rgba(0, 0, 0, 0.03) 70%,
+        rgba(0, 0, 0, 0) 80%
       );
     }
 
@@ -124,8 +122,8 @@
       margin-bottom: 2rem;
       background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0) 5%,
-        rgba(0, 0, 0, 0.03) 35%
+        rgba(0, 0, 0, 0.03) 70%,
+        rgba(0, 0, 0, 0) 80%
       );
     }
     &.third {
@@ -133,18 +131,50 @@
       margin-bottom: 3rem;
       background: linear-gradient(
         90deg,
-        rgba(0, 0, 0, 0.03) 60%,
-        rgba(0, 0, 0, 0) 75%
+        rgba(0, 0, 0, 0.03) 70%,
+        rgba(0, 0, 0, 0) 80%
       );
     }
 
     &.fourth {
       height: 7rem;
       background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.03) 40%,
-        rgba(0, 0, 0, 0) 80%
+        89deg,
+        rgba(0, 0, 0, 0.03) 14%,
+        rgba(0, 0, 0, 0) 78%
       );
+    }
+    @include media-min-l {
+      &.first {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.03) 13%,
+          rgba(0, 0, 0, 0) 18%
+        );
+      }
+
+      &.second {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0) 5%,
+          rgba(0, 0, 0, 0.03) 35%
+        );
+      }
+      &.third {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.03) 60%,
+          rgba(0, 0, 0, 0) 75%
+        );
+      }
+
+      &.fourth {
+        background: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 0.03) 40%,
+          rgba(0, 0, 0, 0) 80%
+        );
+      }
     }
   }
 }

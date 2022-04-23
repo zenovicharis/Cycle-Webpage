@@ -70,4 +70,16 @@
     padding-bottom: 4rem;
     padding-top: 4rem;
   }
+
+  @include media-min-xxl {
+    padding-bottom: 8rem;
+  }
+
+  @include media-min-xxxl {
+    padding-bottom: 18rem;
+  }
+
+  @include media-min-hd {
+    padding-bottom: 24rem;
+  }
 }

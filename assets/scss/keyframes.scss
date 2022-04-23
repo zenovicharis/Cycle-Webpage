@@ -1,0 +1,46 @@
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-75%);
+  }
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loading-new {
+  0% {
+    width: 5rem;
+    height: 5rem;
+  }
+  33% {
+    width: 6rem;
+    height: 6rem;
+  }
+  66% {
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@keyframes loading-finish {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(360deg) scale(100);
+  }
+}

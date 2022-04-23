@@ -1,0 +1,32 @@
+section.loading {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: #fff;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .logo-container {
+    animation: 3s infinite normal linear loading-new;
+    background-color: $primary_color;
+    border-radius: 50%;
+    padding: 0.1rem;
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+
+    &.loaded {
+      animation: 1s forwards normal cubic-bezier(1, 0, 1, 0) loading-finish;
+    }
+    svg {
+      width: 100%;
+    }
+  }
+}
