@@ -1,14 +1,25 @@
-$purple-primary: #50509f;
-$white: #fff;
-$gray: #bebebe;
-$dark-navi: #0f0f0f;
-$orange: #FE805C;
-$dark-gray: #666;
-$light-gray: #929292;
-$black: #000;
+body {
+  margin: 0;
+}
+section {
+  padding: 0 1rem;
+}
+
+.hidden {
+  display: none !important;
+}
 
 @import "font.scss";
+@import "config.scss";
+@import "typography.scss";
 @import "keyframes.scss";
-@import "index.scss";
-@import "media-queries.scss";
 
+// sections
+@import "sections/main-section.scss";
+@import "sections/sponsores-section.scss";
+@import "sections/instruction-section.scss";
+@import "sections/feature-section.scss";
+@import "sections/feedback-section.scss";
+@import "sections/footer.scss";
+@import "sections/header.scss";
+@import "sections/loading.scss";

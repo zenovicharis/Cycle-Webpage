@@ -1,0 +1,124 @@
+footer {
+  padding: 0 1rem;
+  font-family: Poppins-Bold;
+  .lists {
+    display: flex;
+    justify-content: space-between;
+    p {
+      text-align: left;
+      padding: 2rem 0;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      padding-bottom: 1rem;
+      list-style-type: none;
+      text-align: left;
+      li {
+        a {
+          text-decoration: none;
+          color: #000;
+          font-family: Poppins-Light;
+        }
+      }
+    }
+  }
+  .app-footer-info {
+    .stores {
+      display: flex;
+      justify-content: space-between;
+      .blocks {
+        width: 48%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .app-footer-brand {
+      img {
+        width: 16rem;
+      }
+    }
+    .app-footer-brand-text {
+      display: none;
+    }
+    .app-footer-brand {
+      display: none;
+    }
+  }
+
+  @include media-min-m {
+    display: flex;
+    align-items: center;
+    padding: 2rem 3rem;
+
+    .app-footer-info {
+      display: block;
+      .stores {
+        display: flex;
+        justify-content: flex-start;
+        .blocks {
+          width: 30%;
+          padding-right: 1rem;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .app-footer-brand-text {
+        display: block;
+        padding: 1rem 0;
+      }
+      .app-footer-brand {
+        display: block;
+      }
+    }
+    .lists {
+      padding-left: 2rem;
+      order: 2;
+      width: 50%;
+      justify-content: space-around;
+      > div {
+        flex-direction: column;
+      }
+      .social {
+        display: none;
+      }
+    }
+    .app-footer-info {
+      order: 1;
+      width: 50%;
+    }
+  }
+
+  @include media-min-l {
+    padding: 3rem 6rem;
+  }
+}
+
+.social-media-section {
+  display: none;
+  flex-direction: row;
+  padding: 0 1rem;
+  ul {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+    list-style-type: none;
+    text-align: left;
+    li {
+      display: inline-block;
+      padding: 0 1rem;
+      a {
+        text-decoration: none;
+        color: #000;
+        font-family: Poppins-Light;
+      }
+    }
+  }
+
+  @include media-min-m {
+    display: flex;
+    padding: 2rem 6rem;
+  }
+}

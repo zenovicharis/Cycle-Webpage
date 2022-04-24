@@ -1,0 +1,85 @@
+.instruction {
+  padding: 0;
+  .card-swiper {
+    padding-bottom: 1rem;
+    .card-container {
+      align-items: center;
+      .card {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem;
+        width: 60%;
+        min-height: 19rem;
+        border-radius: 15px;
+        box-shadow: 0px 0px 5px 2px #eee;
+        .card-text p {
+          font-family: Poppins-Regular;
+        }
+        &.reward {
+          border: 5px solid $secondary_color;
+        }
+      }
+    }
+  }
+
+  @include media-min-m {
+    margin: 3rem 0;
+    background: url("../img/svg/icons-know-how/line.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    padding: 0;
+    .title-block {
+      padding-top: 3rem;
+      h5 {
+        font-size: 1em;
+      }
+      h2 {
+        font-size: 3em;
+        padding-bottom: 0;
+      }
+    }
+
+    .card-swiper {
+      .card-container {
+        padding-top: 2rem;
+        min-height: 30rem;
+        transform: none !important;
+        justify-content: space-around;
+        .card {
+          transform: scale(1);
+          transition: all 0.5s ease 0s;
+          &:hover {
+            transform: scale(1.05);
+          }
+          align-self: flex-start;
+          width: 20%;
+          &:first-child {
+            align-self: center;
+          }
+
+          &:last-child {
+            align-self: center;
+          }
+        }
+      }
+    }
+  }
+  @include media-min-xl {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+  }
+
+  @include media-min-xxl {
+    padding-bottom: 8rem;
+  }
+
+  @include media-min-xxxl {
+    padding-bottom: 18rem;
+  }
+
+  @include media-min-hd {
+    padding-bottom: 24rem;
+  }
+}

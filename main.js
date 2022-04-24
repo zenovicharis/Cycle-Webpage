@@ -1,59 +1,75 @@
 import "./assets/scss/main.scss";
 
-import $ from "jquery";
+import "swiper/css";
+import Swiper from "swiper";
+import Gumshoe from "gumshoejs";
+import SmoothScroll from "smooth-scroll";
 
-function ChangePhoneFrame(e) {
-  var el = $(e.target).closest(".phone-option");
-  var path = el.data("name");
-  var video = "./" + path;
-  let [_, __, fileName] = path.split("/");
-  let [name, ___] = fileName.split(".");
-  // debugger;
-  $(".phone-option.active").removeClass("active");
-  el.addClass("active");
-  $(".phone-option-text.active").removeClass("active");
-  var text = $("#" + name + "-t").addClass("active");
-  $("#video-src").attr("src", video);
-  $("#video")[0].load();
-}
+const header = document.getElementsByTagName("header")[0];
+const questions = document.querySelectorAll(".question-answer");
+const logoLoader = document.querySelector(".logo-container");
+const loader = document.querySelector("section.loading");
+const wrapper = document.querySelector(".wrapper");
 
-$(document).on("click", ".phone-option", ChangePhoneFrame);
-
-$(document).ready(function () {
-  $(".phone-option").each(function (i, el) {
-    var fileName = $($(el).find("source")[0]).attr("src").substring(1);
-    console.log(i, $(el).data("name", fileName));
-    console.log(i, $(el).data("name"));
+const mainFunction = () => {
+  logoLoader.addEventListener("click", function () {
+    this.classList.toggle("loaded");
   });
-  setTimeout(function () {
-    $("body").addClass("loaded");
-    setTimeout(function () {
-      $(".loader").css("transition", "0s");
-    }, 4500);
-  }, 3500);
 
-  setInterval(function () {
-    NextPhoneFrame();
-  }, 15000);
+  var spy = new Gumshoe("#menu-list-desktop a", {
+    offset: function () {
+      return header.getBoundingClientRect().height;
+    },
+    events: true,
+    reflow: true,
+  });
 
-  function NextPhoneFrame() {
-    var l = $(".phone-option").length;
-    var active = $(".phone-option.active").index();
-    var next = active + 1;
-    if (next == l) {
-      next = 0;
-    }
-    // debugger;
-    var path = $(".phone-option").eq(next).data("name");
+  document.addEventListener("gumshoeActivate", headerSpyFunction, false);
 
-    let [_, __, fileName] = path.split("/");
-    let [name, ___] = fileName.split(".");
-    var video = "./" + path;
-    $(".phone-option.active").removeClass("active");
-    $(".phone-option").eq(next).addClass("active");
-    $(".phone-option-text.active").removeClass("active");
-    var text = $("#" + name + "-t").addClass("active");
-    $("#video-src").attr("src", video);
-    $("#video")[0].load();
+  new SmoothScroll('a[href*="#"]', {
+    header: "header",
+  });
+
+  questions.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      let radioButton = this.querySelector("input");
+      radioButton.checked = !radioButton.checked;
+    });
+  });
+
+  const swiper = new Swiper(".card-swiper", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 10,
+  });
+};
+
+const headerSpyFunction = function (event) {
+  if (event.detail && event.detail.content.id === "main") {
+    header.classList.remove("colored");
+  } else {
+    header.classList.add("colored");
   }
+};
+
+const scrollIntoSection = () => {
+  let urlElements = window.location.href.split("#");
+  let section = urlElements[1];
+  if (section) {
+    document.getElementById(urlElements[1]).scrollIntoView();
+    if (section != "main") {
+      headerSpyFunction({});
+    }
+  }
+};
+
+window.addEventListener("load", () => {
+  mainFunction();
+  logoLoader.classList.add("loaded");
+  setTimeout(() => {
+    wrapper.classList.remove("hidden");
+    loader.classList.add("hidden");
+    scrollIntoSection();
+  }, 1000);
 });

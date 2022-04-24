@@ -1,0 +1,101 @@
+.features {
+  padding: 0rem 1rem;
+  text-align: center;
+
+  .feature-background {
+    padding: 15rem 0;
+    background: url("../img/backgrounds/features.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .feature-text {
+    .description-mail {
+      text-align: center;
+      font-family: Poppins-Regular;
+      color: $subtext_color;
+    }
+
+    .compact-card {
+      padding: 1rem 0;
+      .compact-card-title {
+        h3 {
+          margin: 0;
+          color: $subtitle_color;
+        }
+        padding: 0.5rem 0;
+        font-family: Poppins-Bold;
+      }
+
+      .compact-card-text {
+        p {
+          font-family: Poppins-Regular;
+          color: $subtext_color;
+        }
+      }
+    }
+  }
+
+  @include media-min-m {
+    padding: 3rem 3rem;
+    position: relative;
+    display: flex;
+    .orange-dot {
+      width: 5rem;
+      height: 5rem;
+      background-color: $secondary_color;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 5rem;
+      right: 5rem;
+    }
+    .feature-background {
+      display: flex;
+      order: 2;
+    }
+    .feature-background {
+      padding: 0 20rem;
+    }
+    .feature-text {
+      display: flex;
+      flex-direction: column;
+      order: 1;
+      .description-mail {
+        text-align: left;
+      }
+      .title-block {
+        text-align: left;
+        .subheader-top {
+          display: none;
+        }
+        .mainheader-bottom {
+          font-size: 3em;
+        }
+      }
+      .compact-card {
+        display: flex;
+        text-align: left;
+        .compact-card-content {
+          padding-left: 1rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          .compact-card-title {
+            padding: 0;
+          }
+        }
+        .compact-card-icon {
+          display: flex;
+          img {
+            transition: all 0.3s ease;
+            width: 5rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include media-min-l {
+    padding: 3rem 6rem;
+  }
+}
