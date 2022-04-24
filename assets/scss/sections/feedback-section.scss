@@ -6,7 +6,6 @@
   padding-bottom: 1rem;
   padding-top: 1rem;
   position: relative;
-  // overflow: visi;
 
   .top-feedback {
     text-align: center;
@@ -86,7 +85,7 @@
   }
 
   @include media-min-l {
-    padding: 3rem 6rem;
+    padding: 4rem 6rem;
   }
 }
 

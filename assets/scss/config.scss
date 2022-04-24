@@ -37,7 +37,7 @@ $media-max-ml: "#{$media-type} and (max-width: #{$breakpoint-ml-value - 1}px)";
 $media-max-l: "#{$media-type} and (max-width: #{$breakpoint-l-value - 1}px)";
 $media-max-xl: "#{$media-type} and (max-width: #{$breakpoint-xl-value - 1}px)";
 $media-max-xxl: "#{$media-type} and (max-width: #{$breakpoint-xxl-value - 1}px)";
-// $media-min-xxxl: '#{$media-type} and (max-width: #{$breakpoint-xxxl-value - 1}px)';
+$media-max-xxxl: "#{$media-type} and (max-width: #{$breakpoint-xxxl-value - 1}px)";
 $media-max-hd: "#{$media-type} and (max-width: #{$breakpoint-hd-value - 1}px)";
 $media-max-height-m: "#{$media-type} and (max-height: 850px)";
 
@@ -87,7 +87,7 @@ $media-max-height-m: "#{$media-type} and (max-height: 850px)";
 }
 
 @mixin media-min-xxxl {
-  @include media-max-l {
+  @media #{$media-min-xxxl} {
     @content;
   }
 }
