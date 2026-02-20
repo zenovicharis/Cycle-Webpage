@@ -14,6 +14,6 @@
   "dependencies": {
     "gumshoejs": "^5.1.2",
     "smooth-scroll": "^16.1.3",
-    "swiper": "^8.0.7"
+    "swiper": "^12.1.2"
   }
 }

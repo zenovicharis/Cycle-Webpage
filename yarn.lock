@@ -37,12 +37,6 @@ braces@~3.0.2:
   optionalDependencies:
     fsevents "~2.3.2"
 
-dom7@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.npmjs.org/dom7/-/dom7-4.0.4.tgz"
-  dependencies:
-    ssr-window "^4.0.0"
-
 esbuild-android-64@0.14.54:
   version "0.14.54"
   resolved "https://registry.yarnpkg.com/esbuild-android-64/-/esbuild-android-64-0.14.54.tgz#505f41832884313bbaffb27704b8bcaa2d8616be"
@@ -277,20 +271,13 @@ source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
 
-ssr-window@^4.0.0, ssr-window@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/ssr-window/-/ssr-window-4.0.2.tgz"
-
 supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
 
-swiper@^8.0.7:
-  version "8.0.7"
-  resolved "https://registry.npmjs.org/swiper/-/swiper-8.0.7.tgz"
-  dependencies:
-    dom7 "^4.0.4"
-    ssr-window "^4.0.2"
+swiper@^12.1.2:
+  version "12.1.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-12.1.2.tgz#39eaad0c088def66a7eb8f6bae1439384586ab90"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
